@@ -71,7 +71,7 @@ Chain-of-handshakes finder and interactive friend-network explorer for VKontakte
 </td>
 <td width="33%" valign="top">
 
-### [mini-player](https://github.com/FalconTechDev/mini-player)
+### <img src="https://raw.githubusercontent.com/FalconTechDev/mini-player/main/docs/logo.png" width="26" align="top"> [mini-player](https://github.com/FalconTechDev/mini-player)
 Floating always-on-top mini windows for YouTube, TikTok, Twitch and video files.
 
 </td>
