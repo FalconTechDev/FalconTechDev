@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="FalconTechDev">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#101a3a"/>
+      <stop offset="1" stop-color="#1b2a5e"/>
+    </linearGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="18" fill="url(#bg)"/>
+  <g opacity="0.07" stroke="#9db4ff" stroke-width="1">
+    <path d="M0 60H1200M0 120H1200M0 180H1200M0 240H1200"/>
+    <path d="M100 0V300M300 0V300M500 0V300M700 0V300M900 0V300M1100 0V300"/>
+  </g>
+  <!-- falcon mark: two swept wings and a head -->
+  <g transform="translate(140 150)">
+    <path d="M-92 -52 L-8 -8 L-40 28 Z" fill="url(#wing)" opacity="0.55"/>
+    <path d="M92 -52 L8 -8 L40 28 Z" fill="url(#wing)" opacity="0.55"/>
+    <path d="M-72 -74 L0 -14 L72 -74 L28 52 L0 74 L-28 52 Z" fill="url(#wing)"/>
+    <path d="M-14 -4 L0 14 L14 -4 L0 6 Z" fill="#0b1020"/>
+  </g>
+  <text x="270" y="148" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="72" font-weight="700" fill="#f1f5f9" letter-spacing="1">FalconTechDev</text>
+  <text x="274" y="196" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" fill="#a5b4fc">Systems code · developer tools · desktop apps</text>
+  <text x="274" y="238" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#64748b" font-style="italic">The falcon cannot hear the falconer.</text>
+</svg>
