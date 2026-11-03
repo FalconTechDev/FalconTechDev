@@ -1,8 +1,8 @@
 <img src="assets/hero.png" width="100%">
 
-Systems software, mostly Rust. Databases and network tools — things that have to be fast and also have to be correct.
+Most of this started because I wanted to know how something actually works, down to the layer nobody looks at.
 
-Every repo says how it was measured and where it loses, because I've been burned enough times by my own benchmarks to be careful about it.
+Every repo says how it was measured and where it loses. I've been burned enough times by my own benchmarks to be careful about that.
 
 ### What I'm building
 
