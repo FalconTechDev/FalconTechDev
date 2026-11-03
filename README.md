@@ -1,110 +1,43 @@
-<div align="center">
+<img src="assets/mark.png" width="130" align="right">
 
-<img src="assets/banner.png" alt="FalconTechDev" width="100%">
+I write systems software, mostly Rust. Databases, network tools, things that have to be fast and also have to be correct.
 
-[![Rust](https://img.shields.io/badge/Rust-0b1020?style=flat-square&logo=rust&logoColor=ff9d5c)](https://github.com/FalconTechDev?tab=repositories&language=rust)
-[![Go](https://img.shields.io/badge/Go-0b1020?style=flat-square&logo=go&logoColor=5fd3c6)](https://github.com/FalconTechDev?tab=repositories&language=go)
-[![Python](https://img.shields.io/badge/Python-0b1020?style=flat-square&logo=python&logoColor=8fb8ff)](https://github.com/FalconTechDev?tab=repositories&language=python)
-[![TypeScript](https://img.shields.io/badge/TypeScript-0b1020?style=flat-square&logo=typescript&logoColor=6aa9ff)](https://github.com/FalconTechDev?tab=repositories&language=typescript)
-[![Repositories](https://img.shields.io/badge/repositories-22-7c6bd6?style=flat-square)](https://github.com/FalconTechDev?tab=repositories)
+Most of this started because I wanted to know how something actually works. FalconDB exists because I wanted to see what a columnar engine looks like when you own every layer of it, down to the storage format and the encodings. It ended up faster than DuckDB on everything I measured, which surprised me more than it should have.
 
-</div>
+Every repo says how it was measured and where it loses. I've been burned enough times by my own benchmarks to be careful: a run on battery halves every engine and says nothing about it, an unpinned run on a hybrid CPU moves 40% on unchanged code, and a single reading is not a result. Quite a lot of the FalconDB README is about mistakes I made measuring it, including the ones that got published before I caught them.
 
-Built from the lowest layer that makes the problem honest: kernel accounting instead of sampling, measured results instead of claims, one binary instead of a stack.
+### Projects
 
-Every repository says how it was measured and where it loses. A number without the conditions it was taken under is not a result.
+[**falcondb**](https://github.com/FalconTechDev/falcondb) — columnar analytical database in Rust. Storage, encodings, planner, executor, indices, WAL, SQL front end. Benchmarked in one process against DuckDB, DataFusion and Polars over the same Parquet file. Ahead of DuckDB and DataFusion on all 26 points I measured, behind Polars on three of them, and slower than everyone at loading Parquet.
 
-## Flagship
+[**netwatch**](https://github.com/FalconTechDev/netwatch) — which program is using your connection, live. Reads the kernel's own accounting, ETW on Windows and eBPF on Linux, so a process that lives for two seconds doesn't fall between two polls.
 
-<a href="https://github.com/FalconTechDev/falcondb"><img src="https://raw.githubusercontent.com/FalconTechDev/falcondb/main/assets/banner.svg" alt="FalconDB" width="100%"></a>
+[**sotto**](https://github.com/FalconTechDev/sotto) — end-to-end encrypted secret sync for small teams. Encryption happens on your machine; the server never holds a key that could decrypt what it stores.
 
-<table>
-<tr>
-<td width="50%" valign="top">
+[**falconnet**](https://github.com/FalconTechDev/falconnet) — SQL over packet captures, with per-process attribution. Wireshark shows you frames; this answers questions.
 
-### [FalconDB](https://github.com/FalconTechDev/falcondb) &nbsp;`Rust`
-A columnar analytical database engine written from scratch: storage, encodings, planner, executor, indices, WAL and the SQL front end. Benchmarked in one process against DuckDB, DataFusion and Polars over the same Parquet file — ahead of DuckDB and DataFusion on all 26 measured points — with the method, the drift and the places it trails in the repository.
+[**synchronize**](https://github.com/FalconTechDev/synchronize) — keeps my git repos in step across machines. Syncs at login, on a timer and before shutdown. Written because I kept losing an evening's work to the laptop I wasn't sitting at.
 
-</td>
-<td width="50%" valign="top">
+[**help-finder**](https://github.com/FalconTechDev/help-finder) — read-only scan for questions nobody has answered yet across GitHub, Stack Overflow, HN, Habr, dev.to, Lobsters and Discourse.
 
-### [netwatch](https://github.com/FalconTechDev/netwatch) &nbsp;`Rust`
-Which program is using your connection, and how much. Reads the kernel's own accounting — ETW on Windows, eBPF on Linux — instead of sampling, so a short-lived process is not missed between two polls.
+### Smaller things
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+Each of these answers one question and stops there.
 
-### [sotto](https://github.com/FalconTechDev/sotto) &nbsp;`Rust`
-End-to-end encrypted secret sync for developer teams. Encryption happens locally; the server only ever stores ciphertext and never holds a key that could decrypt it.
+[**sql-traps**](https://github.com/FalconTechDev/sql-traps) — the same SQL on MySQL, MariaDB, PostgreSQL and SQL Server, in Docker, where the answers differ. More of them than you'd like.
 
-</td>
-<td width="50%" valign="top">
+[**workflow-doctor**](https://github.com/FalconTechDev/workflow-doctor) — where a GitHub Actions workflow loses its minutes: per step, retries, cache, critical path.
 
-### [falconnet](https://github.com/FalconTechDev/falconnet) &nbsp;`Rust`
-SQL, diagnostics and per-process attribution over packet captures: Wireshark that answers questions rather than showing frames.
+[**flakemap-contrib**](https://github.com/FalconTechDev/flakemap-contrib) — reruns new or changed pytest tests N times and fails on mixed results, so a flaky test gets caught in the PR that added it.
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+[**jest-polluter-finder**](https://github.com/FalconTechDev/jest-polluter-finder) — finds which Jest files break a victim test, by delta debugging rather than by bisecting by hand.
 
-### <img src="https://raw.githubusercontent.com/FalconTechDev/synchronize/main/docs/logo.png" width="24" align="top"> [synchronize](https://github.com/FalconTechDev/synchronize) &nbsp;`Go`
-Keeps every git repository in step across every machine you work on: at login, on a timer, and before shutdown. Windows, Linux and macOS builds in [Releases](https://github.com/FalconTechDev/synchronize/releases).
+[**dockerfile-diff-size**](https://github.com/FalconTechDev/dockerfile-diff-size) — which instruction made the image bigger, layer by layer.
 
-</td>
-<td width="50%" valign="top">
+[**vk-chain**](https://github.com/FalconTechDev/vk-chain), [**mini-player**](https://github.com/FalconTechDev/mini-player), [**desktop-focus**](https://github.com/FalconTechDev/desktop-focus) — desktop apps for Windows. A friend-of-a-friend path finder for VK, floating always-on-top video windows, and a way to hide every desktop icon except the ones you want.
 
-### [help-finder](https://github.com/FalconTechDev/help-finder) &nbsp;`Python`
-A read-only scan for questions nobody has answered yet, across GitHub, Stack Overflow, Hacker News, Habr, dev.to, Lobsters and Discourse.
+### Elsewhere
 
-</td>
-</tr>
-</table>
+I send patches to projects I use. Some of the forks here are that, not abandoned copies.
 
-## Developer tools
-
-Small tools that each answer one question, with measured results.
-
-| Tool | What it answers |
-|---|---|
-| [**sql-traps**](https://github.com/FalconTechDev/sql-traps) | The same SQL on MySQL, MariaDB, PostgreSQL and SQL Server in Docker: where the results differ, with versions and dates. |
-| [**workflow-doctor**](https://github.com/FalconTechDev/workflow-doctor) | Where a GitHub Actions workflow loses minutes: per step, retries, cache, critical path, cost. |
-| [**flakemap-contrib**](https://github.com/FalconTechDev/flakemap-contrib) | Which new or changed pytest tests are unstable: rerun N times and fail on mixed results. |
-| [**jest-polluter-finder**](https://github.com/FalconTechDev/jest-polluter-finder) | Which Jest test files make a victim test fail, found by delta debugging. |
-| [**dockerfile-diff-size**](https://github.com/FalconTechDev/dockerfile-diff-size) | Which Dockerfile instruction made the image bigger, layer by layer. |
-
-## Desktop apps
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### <img src="https://raw.githubusercontent.com/FalconTechDev/vk-chain/main/assets/logo.png" width="24" align="top"> [vk-chain](https://github.com/FalconTechDev/vk-chain)
-Chain-of-handshakes finder and interactive friend-network explorer for VKontakte.
-
-</td>
-<td width="33%" valign="top">
-
-### <img src="https://raw.githubusercontent.com/FalconTechDev/mini-player/main/docs/logo.png" width="24" align="top"> [mini-player](https://github.com/FalconTechDev/mini-player)
-Floating always-on-top mini windows for YouTube, TikTok, Twitch and video files.
-
-</td>
-<td width="33%" valign="top">
-
-### [desktop-focus](https://github.com/FalconTechDev/desktop-focus)
-Hide every desktop icon except the ones you choose, and restore their positions.
-
-</td>
-</tr>
-</table>
-
----
-
-<div align="center">
-
-Each project has its own README with install steps, limits, and how it was measured.<br>
-Issues and pull requests are welcome.
-
-</div>
+If something here is wrong or doesn't build on your machine, open an issue. I'd rather know.
