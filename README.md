@@ -6,7 +6,7 @@ Every repo says how it was measured and where it loses. I've been burned enough 
 
 ### What I'm building
 
-**[falcondb](https://github.com/FalconTechDev/falcondb)** &nbsp;·&nbsp; `Rust`<br>
+<img src="assets/mini-falcondb.png" height="20" align="top">&nbsp; **[falcondb](https://github.com/FalconTechDev/falcondb)** &nbsp;·&nbsp; `Rust`<br>
 A columnar analytical database, written from the storage format up. Faster than DuckDB and DataFusion on all 26 points I measured, and slower than everyone at loading Parquet.
 
 **[netwatch](https://github.com/FalconTechDev/netwatch)** &nbsp;·&nbsp; `Rust`<br>
@@ -18,7 +18,7 @@ End-to-end encrypted secret sync. The server never holds a key that could decryp
 **[falconnet](https://github.com/FalconTechDev/falconnet)** &nbsp;·&nbsp; `Rust`<br>
 SQL over packet captures. Wireshark shows you frames; this answers questions.
 
-**[synchronize](https://github.com/FalconTechDev/synchronize)** &nbsp;·&nbsp; `Go`<br>
+<img src="https://raw.githubusercontent.com/FalconTechDev/synchronize/main/docs/logo.png" height="20" align="top">&nbsp; **[synchronize](https://github.com/FalconTechDev/synchronize)** &nbsp;·&nbsp; `Go`<br>
 Keeps my git repos in step across machines. Written after losing an evening's work to the laptop I wasn't sitting at.
 
 **[help-finder](https://github.com/FalconTechDev/help-finder)** &nbsp;·&nbsp; `Python`<br>
