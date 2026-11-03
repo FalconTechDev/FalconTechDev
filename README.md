@@ -12,9 +12,6 @@ A columnar analytical database, written from the storage format up. Faster than 
 **[netwatch](https://github.com/FalconTechDev/netwatch)** &nbsp;·&nbsp; `Rust`<br>
 Which program is using your connection, live. Reads the kernel's own accounting instead of polling, so a process that lives two seconds isn't missed.
 
-**[sotto](https://github.com/FalconTechDev/sotto)** &nbsp;·&nbsp; `Rust`<br>
-End-to-end encrypted secret sync. The server never holds a key that could decrypt what it stores.
-
 **[falconnet](https://github.com/FalconTechDev/falconnet)** &nbsp;·&nbsp; `Rust`<br>
 SQL over packet captures. Wireshark shows you frames; this answers questions.
 
@@ -42,5 +39,5 @@ Each answers one question and stops.
 
 ---
 
-Some of the forks here are patches to projects I use, not abandoned copies.<br>
+Some of the forks here are patches to projects I use, not abandoned copies — [sotto](https://github.com/getsotto/sotto) among them.<br>
 If something doesn't build on your machine, open an issue. I'd rather know.
